@@ -5,29 +5,43 @@
  * @author (seu nome) 
  * @version (número de versão ou data)
  */
-public class Size
-{
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    private int x;
+public enum Size{
+    SMALL(32, 36, "Pequeno", 'S'),
 
-    /**
-     * COnstrutor para objetos da classe Size
-     */
-    public Size()
-    {
-        // inicializa variáveis de instância
-        x = 0;
+    MEDIUM(37, 44, "Médio", 'M'),
+
+    LARGE(45, 52, "Grande", 'L');
+
+    private final String description;
+    private final int minValue;
+    private final int maxValue;
+    private final char code;
+
+    private Size(int minValue, int maxValue, String description, char code){
+        this.description = description;
+        this.minValue = minValue;
+        this.maxValue = maxValue;
+        this.code = code;
     }
 
-    /**
-     * Exemplo de método - substitua este comentário pelo seu próprio
-     * 
-     * @param  y   exemplo de um parâmetro de método
-     * @return     a soma de x com y 
-     */
-    public int sampleMethod(int y)
-    {
-        // ponha seu código aqui
-        return x + y;
+    @Override
+    public String toString() {
+        return this.description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getMinValue() {
+        return minValue;
+    }
+
+    public int getMaxValue() {
+        return maxValue;
+    }
+
+    public char getCode() {
+        return code;
     }
 }
