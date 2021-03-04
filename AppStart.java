@@ -10,9 +10,9 @@ public class AppStart{
     public static void main(String[] args){
         Size size = Size.MEDIUM;
         
-        System.out.println("Name         : " );
+        System.out.println("Name         : " + size.toString() ); //?
         System.out.println("toString()   : \"" + size.toString() + "\"");
-        System.out.println("Ordem        : " );
+        System.out.println("Ordem        : " + size.ordinal());
         System.out.println("Valor mínimo : " + size.getMinValue());
         System.out.println("Valor máximo : " + size.getMaxValue());
         System.out.println("Codigo       : \'"+ size.getCode() + "\'");
