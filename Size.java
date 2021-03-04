@@ -1,9 +1,9 @@
 
 /**
- * Escreva a descrição da classe Size aqui.
+ * Size representa os tamanhas que a chavena de bebidas pode ter.
  * 
- * @author (seu nome) 
- * @version (número de versão ou data)
+ * @author Margarida 
+ * @version 04-03-2021
  */
 public enum Size{
     SMALL(32, 36, "Pequeno", 'S'),
@@ -29,6 +29,9 @@ public enum Size{
         return this.description;
     }
 
+    /**Este método retorna a descrição de um tamanho.
+     * return [String] description
+    */
     public String getDescription() {
         return description;
     }
